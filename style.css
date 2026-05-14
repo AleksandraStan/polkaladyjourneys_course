@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fff;
+}
+
+.comic-section {
+    padding: 80px 20px;
+    background: linear-gradient(180deg,#fff8f0 0%,#ffffff 100%);
+}
+
+.comic-card {
+    max-width: 1200px;
+    margin: 0 auto 80px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    background: white;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.comic-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.12);
+}
+
+.comic-content {
+    padding: 60px;
+}
+
+.comic-tag {
+    display: inline-block;
+    background: #ffcc70;
+    color: #222;
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.comic-title {
+    font-size: 52px;
+    line-height: 1;
+    margin-bottom: 20px;
+    font-weight: 800;
+    color: #111;
+}
+
+.comic-description {
+    font-size: 20px;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 35px;
+}
+
+.comic-button a {
+    background: #111;
+    color: white;
+    padding: 16px 30px;
+    border-radius: 14px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.comic-button a:hover {
+    background: #ff7a18;
+    transform: scale(1.05);
+}
+
+.comic-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.reverse {
+    direction: rtl;
+}
+
+.reverse .comic-content {
+    direction: ltr;
+}
+
+@media(max-width: 900px) {
+    .comic-card {
+        grid-template-columns: 1fr;
+    }
+
+    .comic-content {
+        padding: 40px 30px;
+    }
+
+    .comic-title {
+        font-size: 38px;
+    }
+}
